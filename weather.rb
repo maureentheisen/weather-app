@@ -5,7 +5,9 @@ client = Weatherman::Client.new
 client.lookup_by_location(location)
 end
 
-weather = get_location('27707')
+puts "enter your zipcode".chomp
+zipcode = gets.chomp()
+weather = get_location(zipcode)
 
 today = Time.now.strftime('%w').to_i
 
